@@ -2,7 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.4.1'
 	id 'io.spring.dependency-management' version '1.1.7'
-	id 'war'
+	//id 'war'
 }
 
 group = 'com.deepen.team1'
@@ -65,7 +65,7 @@ dependencies {
 	implementation 'org.apache.poi:poi-ooxml:5.2.3'
 	implementation 'org.apache.poi:poi:5.2.3'
 	
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	
 	// https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1
 	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
@@ -85,7 +85,12 @@ tasks.withType(JavaCompile) {
     options.compilerArgs += '-parameters'
 }
 
-bootWar {
+//bootWar {
+//	archiveBaseName = 'ROOT' 
+//	archiveVersion = '' 
+//}
+
+bootJar {
 	archiveBaseName = 'ROOT' 
 	archiveVersion = '' 
 }
